@@ -12,7 +12,14 @@ module.exports = {
   attributes: {
     linkImagenVestimenta: {
       type: 'string',
+      required: true,
+      unique: true,
       columnName: 'link_imagen_vestimenta'
+    },
+
+    consumidorAvatar: {
+      collection: 'ConsumidorAvatar',
+      via: 'idVestimenta'
     }
   },
 

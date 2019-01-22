@@ -12,8 +12,17 @@ module.exports = {
   attributes: {
     linkImagenCabello: {
       type: 'string',
+      required: true,
+      unique: true,
       columnName: 'link_imagen_cabello'
+    },
+
+    consumidorAvatar: {
+      collection: 'ConsumidorAvatar',
+      via: 'idCabello'
     }
+
+
   },
 
 };
