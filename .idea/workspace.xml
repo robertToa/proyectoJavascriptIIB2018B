@@ -61,15 +61,44 @@
           <entry key="Angular2LanguageService" value="1" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JavaScript" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="53" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="53" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Front End/proyectoIIBFE/src/app/app.component.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Back End/DBproyectoIIB/config/datastores.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
             </state>
           </provider>
         </entry>
@@ -83,6 +112,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Front End/proyectoIIBFE/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/Back End/DBproyectoIIB/config/datastores.js" />
       </list>
     </option>
   </component>
@@ -93,10 +123,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/Back End/DBproyectoIIB/node_modules" />
     <handled-path value="$PROJECT_DIR$/Front End/proyectoIIBFE/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
+      <path value="$PROJECT_DIR$/Back End/DBproyectoIIB/package.json" />
       <path value="$PROJECT_DIR$/Front End/proyectoIIBFE/package.json" />
     </packageJsonPaths>
   </component>
@@ -117,6 +149,24 @@
             <path>
               <item name="proyectoJavascriptIIB2018B" type="b2602c69:ProjectViewProjectNode" />
               <item name="proyectoJavascriptIIB2018B" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proyectoJavascriptIIB2018B" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyectoJavascriptIIB2018B" type="462c0819:PsiDirectoryNode" />
+              <item name="Back End" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proyectoJavascriptIIB2018B" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyectoJavascriptIIB2018B" type="462c0819:PsiDirectoryNode" />
+              <item name="Back End" type="462c0819:PsiDirectoryNode" />
+              <item name="DBproyectoIIB" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proyectoJavascriptIIB2018B" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proyectoJavascriptIIB2018B" type="462c0819:PsiDirectoryNode" />
+              <item name="Back End" type="462c0819:PsiDirectoryNode" />
+              <item name="DBproyectoIIB" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="proyectoJavascriptIIB2018B" type="b2602c69:ProjectViewProjectNode" />
@@ -166,17 +216,17 @@
       <option name="presentableId" value="Default" />
       <updated>1546979131124</updated>
       <workItem from="1546979141524" duration="2898000" />
-      <workItem from="1548164392684" duration="3178000" />
+      <workItem from="1548164392684" duration="5239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6076000" />
+    <option name="totallyTimeSpent" value="8137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -189,7 +239,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" weight="0.3295082" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -208,6 +258,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Back End/DBproyectoIIB/config/datastores.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
