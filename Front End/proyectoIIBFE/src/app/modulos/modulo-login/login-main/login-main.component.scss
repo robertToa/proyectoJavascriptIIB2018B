@@ -1,0 +1,41 @@
+
+#header{
+  top: 0;
+  color: white;
+  overflow: hidden;
+  position: fixed;
+  background-color: #001c20;
+  width: 100%;
+}
+
+#div{
+  display: block;
+}
+
+#logo{
+  padding-top: 2px;
+  float: left;
+  padding-left: 20px;
+}
+
+#logeo{
+  float: right;
+  padding-right: 40px;
+  padding-top: 10px;
+}
+#username{
+  margin-right: 5px;
+  border-color: white;
+  background-color: #001c20;
+  color: white;
+}
+#password{
+  margin-right: 5px;
+  border-color: white;
+  color: white;
+  background-color: #001c20;
+}
+
+#buttonLogin{
+  text-underline-color: white;
+}

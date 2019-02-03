@@ -26,6 +26,10 @@ module.exports = {
       ],
       defaultsTo: 'Administracion Departamentos'
     },
+    password: {
+      type: 'string',
+      required: true
+    },
 
     idPersona:{
       model: 'Persona'
