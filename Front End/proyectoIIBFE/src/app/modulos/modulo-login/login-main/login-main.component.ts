@@ -13,6 +13,7 @@ export class LoginMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
   logearse(){

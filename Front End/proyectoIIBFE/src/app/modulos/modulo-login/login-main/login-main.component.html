@@ -6,7 +6,7 @@
     <form #formularioLogin="ngForm"
           novalidate
           (submit)="logearse(formularioLogin)">
-      <!-- <div>
+       <div>
        <p *ngIf="inputUsername.errors">
          Error:
          <span *ngIf="inputUsername.errors.required">
@@ -19,7 +19,7 @@
            El password es requerido
          </span>
        </p>
-     </div> -->
+     </div>
       <input id="username" type="text" required name="username"
              placeholder="username"
              [(ngModel)]="username" #inputUsername="ngModel"
