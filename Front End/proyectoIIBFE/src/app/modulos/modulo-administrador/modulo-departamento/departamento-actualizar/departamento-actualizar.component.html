@@ -1,3 +1,11 @@
-<p>
-  departamento-actualizar works!
-</p>
+<div>
+  <h5>Actualizar departamento</h5>
+</div>
+<div>
+  <app-form-departamento
+    [departamentoAux]= "departamentoActualizar"
+    [nombreButtonAux]= "'Actualizar'"
+    (formularioValido)= "actualizarDepartamento($event)"
+  >
+  </app-form-departamento>
+</div>

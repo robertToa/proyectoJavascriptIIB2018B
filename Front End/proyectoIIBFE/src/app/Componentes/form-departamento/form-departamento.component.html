@@ -1,0 +1,62 @@
+<div >
+  <form #formularioDepartamento="ngForm"
+        novalidate
+        (submit)="emitirFormulario(formularioDepartamento)">
+    <div>
+      <label for="identificador">Identificador</label>
+      <input id="identificador" type="text" disabled name="identificador"
+             [(ngModel)]="departamento.id" >
+    </div>
+    <div>
+      <label for="numDepa">Numero del departamento</label>
+      <input id="numDepa" type="number" required name="numDepa"
+             placeholder="numero del departamento"
+             [(ngModel)]="departamento.numeroDepartamento" #inputnumDeo="ngModel">
+    </div>
+    <div>
+      <div  style="color: red; font-size: 12px;" *ngIf="inputnumDeo.errors">
+        error:
+        <br>
+        <span *ngIf="inputnumDeo.errors.required">
+         campo obligatorio
+       </span>
+      </div>
+    </div>
+    <div>
+      <label for="piso">Piso del departamento</label>
+      <input id="piso" type="number" required name="piso"
+             placeholder="piso ubicado"
+             [(ngModel)]="departamento.pisoDepartamento" #inputPiso="ngModel">
+    </div>
+    <div>
+      <div  style="color: red; font-size: 12px;" *ngIf="inputPiso.errors">
+        error:
+        <br>
+        <span *ngIf="inputPiso.errors.required">
+         campo obligatorio
+       </span>
+      </div>
+    </div>
+    <div>
+      <label for="puerto">Puerto de Luz</label>
+      <input id="puerto" type="number" required name="puerto"
+             placeholder="puerto de Luz"
+             [(ngModel)]="departamento.puertoLuz" #inputPuerto="ngModel">
+    </div>
+    <div>
+      <div  style="color: red; font-size: 12px;" *ngIf="inputPuerto.errors">
+        error:
+        <br>
+        <span *ngIf="inputPuerto.errors.required">
+         campo obligatorio
+       </span>
+      </div>
+    </div>
+    <div>
+      <button [disabled]="formularioDepartamento.invalid">
+        {{nombreButton}}
+      </button>
+    </div>
+  </form>
+
+</div>

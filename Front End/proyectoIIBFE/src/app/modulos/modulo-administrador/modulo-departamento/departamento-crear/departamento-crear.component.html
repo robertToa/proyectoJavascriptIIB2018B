@@ -1,3 +1,10 @@
-<p>
-  departamento-crear works!
-</p>
+<div>
+  <h5>Agregar nuevo departamento</h5>
+</div>
+<div>
+  <app-form-objeto-avatar
+    [nombreButtonAux]= "'Crear'"
+    (formularioValido)= "crearDeoartamento($event)"
+  >
+  </app-form-objeto-avatar>
+</div>

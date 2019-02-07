@@ -1,3 +1,31 @@
-<p>
-  departamento-visualizar works!
-</p>
+<div>
+  <h4>Departamentos</h4>
+</div>
+<div>
+  <a routerLink="/Administrador/gestionDepartamentos/crear">
+    <button>Nuevo departamento</button>
+  </a>
+</div>
+<div>
+  <table>
+    <tr>
+      <th>Identificador</th>
+      <th>Piso ubicado</th>
+      <th>Numero de departamento</th>
+      <th>Puerto de Luz</th>
+      <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let departamento of departamentos">
+      <td>{{departamento.id}}</td>
+      <td>{{departamento.pisoDepartamento}}</td>
+      <td>{{departamento.numeroDepartamento}}</td>
+      <td>{{departamento.puertoLuz}}</td>
+      <td>
+        <a [routerLink]="['/Administrador','gestionDepartamentos','actualizar',departamento.id]">
+          <button>Actualizar</button>
+        </a>
+        <button (click)="eliminarDepartamento(departamento.id)">Eliminar</button>
+      </td>
+    </tr>
+  </table>
+</div>

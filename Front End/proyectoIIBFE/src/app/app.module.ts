@@ -45,6 +45,7 @@ import { DepartamentoActualizarComponent } from './modulos/modulo-administrador/
 import { FormObjetoAvatarComponent } from './Componentes/form-objeto-avatar/form-objeto-avatar.component';
 import { ConsumidorMainComponent } from './modulos/modulo-administrador/modulo-consumidor/consumidor-main/consumidor-main.component';
 import { DepartamentoMainAdministradorComponent } from './modulos/modulo-administrador/modulo-departamento/departamento-main-administrador/departamento-main-administrador.component';
+import { FormDepartamentoComponent } from './Componentes/form-departamento/form-departamento.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,7 +88,8 @@ import { DepartamentoMainAdministradorComponent } from './modulos/modulo-adminis
     DepartamentoActualizarComponent,
     FormObjetoAvatarComponent,
     ConsumidorMainComponent,
-    DepartamentoMainAdministradorComponent
+    DepartamentoMainAdministradorComponent,
+    FormDepartamentoComponent
   ],
   imports: [
     BrowserModule,

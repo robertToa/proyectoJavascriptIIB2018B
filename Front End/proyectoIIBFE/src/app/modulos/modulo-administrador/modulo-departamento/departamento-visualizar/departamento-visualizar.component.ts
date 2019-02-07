@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DepartamentoInterface} from "../../../../Interface/departamento-interface";
 
 @Component({
   selector: 'app-departamento-visualizar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartamentoVisualizarComponent implements OnInit {
 
+  departamentos: DepartamentoInterface[] = [];
   constructor() { }
 
   ngOnInit() {
+  }
+
+  eliminarDepartamento(id: number | string){
+
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DepartamentoInterface} from "../../../../Interface/departamento-interface";
 
 @Component({
   selector: 'app-departamento-crear',
@@ -12,4 +13,7 @@ export class DepartamentoCrearComponent implements OnInit {
   ngOnInit() {
   }
 
+  crearDeoartamento(objeto: DepartamentoInterface){
+    console.log(objeto);
+  }
 }
