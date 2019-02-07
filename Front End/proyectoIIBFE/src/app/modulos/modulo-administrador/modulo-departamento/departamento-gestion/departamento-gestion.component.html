@@ -1,0 +1,36 @@
+<div>
+  <h4>Gestion para controlar el acceso a los departamentos</h4>
+</div>
+<div>
+  <table>
+    <tr>
+      <th>Identificador</th>
+      <th>Usuario</th>
+      <th>Departamento</th>
+      <th>Habilitado</th>
+      <th>Accion</th>
+    </tr>
+    <tr *ngFor="let condepar of departamentosconsumidores">
+      <td>{{condepar.id}}</td>
+      <td>
+        <div *ngIf="condepar.idConsumidor">
+          {{condepar.idConsumidor.username}}
+        </div>
+      </td>
+      <td>
+        <div *ngIf="condepar.idDepartamento">
+          {{condepar.idDepartamento.numeroDepartamento}}
+        </div>
+      </td>
+      <td>{{condepar.habilitarDepartamento}}</td>
+      <td>
+        <div *ngIf="condepar.habilitarDepartamento===true">
+          <button>Deshabilitar</button>
+        </div>
+        <div *ngIf="condepar.habilitarDepartamento === false">
+          <button>Habilitar</button>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,21 @@
+<div>
+  <h4>Cabellos de la aplicacion</h4>
+</div>
+<div>
+  <table>
+    <tr>
+      <th>Identificador</th>
+      <th>Link de la imagen</th>
+      <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let cabello of cabellos">
+      <td>{{cabello.id}}</td>
+      <td>{{cabello.linkImagen}}</td>
+      <td>
+        <a [routerLink]="['/Administrador','gestionCabello','actualizar',cabello.id]">
+          <button>Actualizar</button>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>

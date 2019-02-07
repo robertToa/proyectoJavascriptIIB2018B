@@ -24,6 +24,10 @@ module.exports = {
       max: 60,
       columnName: 'numero_departamento'
     },
+    puertoLuz:{
+      type: 'number',
+      columnName: 'puerto-luz'
+    },
     consumidorDepartamento: {
       collection: 'ConsumidorDepartamento',
       via: 'idDepartamento'

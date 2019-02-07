@@ -1,0 +1,27 @@
+<div>
+  <h3>Codigos de Acceso de los diferentes departamentos</h3>
+</div>
+<div>
+  <table>
+    <tr>
+      <th>Identificador</th>
+      <th>Codigo de Acceso</th>
+      <th>Departamento</th>
+      <th>Usuario</th>
+    </tr>
+    <tr *ngFor="let acceso of codigos_accesos">
+      <td>{{acceso.id}}</td>
+      <td>{{acceso.codigoAcceso}}</td>
+      <td>
+        <div *ngIf="acceso.idDepartamento">
+          Departamento {{acceso.idDepartamento.numeroDepartamento}}, piso {{acceso.idDepartamento.pisoDepartamento}}
+        </div>
+      </td>
+      <td>
+        <div *ngIf="acceso.idConsumidor">
+          {{acceso.idConsumidor.username}}
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

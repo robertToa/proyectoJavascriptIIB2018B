@@ -1,0 +1,21 @@
+<div>
+  <h4>Rostros de la aplicacion</h4>
+</div>
+<div>
+  <table>
+    <tr>
+      <th>Identificador</th>
+      <th>Link de la imagen</th>
+      <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let rostro of rostros">
+      <td>{{rostro.id}}</td>
+      <td>{{rostro.linkImagen}}</td>
+      <td>
+        <a [routerLink]="['/Administrador','gestionRostro','actualizar',rostro.id]">
+          <button>Actualizar</button>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>

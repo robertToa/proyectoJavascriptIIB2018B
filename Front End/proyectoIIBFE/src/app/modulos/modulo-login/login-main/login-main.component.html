@@ -1,123 +1,58 @@
-<div id="header">
-  <div id="logo">
-    <img [src]="'/assets/imagenes/logo.PNG'">
+<div>
+  <div id="header" style="float: top">
+    <div id="logo">
+      <img [src]="'/assets/imagenes/logo.PNG'">
+    </div>
+    <div id="logeo">
+      <form #formularioLogin="ngForm"
+            novalidate
+            (submit)="logearse(formularioLogin)">
+        <input id="username" type="text" required name="username"
+               placeholder="username"
+               [(ngModel)]="username" #inputUsername="ngModel"
+        >
+        <input id="password" type="password" required name="password"
+               [(ngModel)]="password"
+               placeholder="password"
+               #inputPassword="ngModel">
+        <button id="buttonLogin" [disabled]="formularioLogin.invalid">
+          Log In
+        </button>
+      </form>
+    </div>
   </div>
-  <div id="logeo">
-    <form #formularioLogin="ngForm"
-          novalidate
-          (submit)="logearse(formularioLogin)">
-       <div>
-       <p *ngIf="inputUsername.errors">
-         Error:
-         <span *ngIf="inputUsername.errors.required">
-           El nombre es requerido
-         </span>
-       </p>
-       <p *ngIf="inputPassword.errors">
-         Error:
-         <span *ngIf="inputPassword.errors.required">
-           El password es requerido
-         </span>
-       </p>
-     </div>
-      <input id="username" type="text" required name="username"
-             placeholder="username"
-             [(ngModel)]="username" #inputUsername="ngModel"
-              >
-      <input id="password" type="password" required name="password"
-             [(ngModel)]="password"
-             placeholder="password"
-             #inputPassword="ngModel">
-      <button id="buttonLogin" [disabled]="formularioLogin.invalid">
-        Log In
-      </button>
-    </form>
+  <div style="padding-top: 30px;">
+    <h1>HOLA MUNDO</h1>
+    <router-outlet></router-outlet>
+    <!--
+    <div *ngIf="codigo">
+      <ngx-qrcode [qrc-value]="codigo"></ngx-qrcode>
+    </div>
+    <div>
+      <button (click)="scan()">Scanear</button>
+    </div>
+    <div *ngIf="salida">
+      <label >{{salida}}</label>
+    </div>
+    -->
   </div>
 </div>
-<ul>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li><li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li><li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
-  <li>hola  asdsad</li>
+<!--
+        <div>
+         <p *ngIf="inputUsername.errors">
+           Error:
+           <span *ngIf="inputUsername.errors.required">
+             El nombre es requerido
+           </span>
+         </p>
+         <p *ngIf="inputPassword.errors">
+           Error:
+           <span *ngIf="inputPassword.errors.required">
+             El password es requerido
+           </span>
+         </p>
+       </div>
+       -->
 
 
-</ul>
 

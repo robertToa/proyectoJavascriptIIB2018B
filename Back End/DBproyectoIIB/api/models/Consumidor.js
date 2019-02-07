@@ -10,11 +10,10 @@ module.exports = {
   tableName: 'db_consumidor',
 
   attributes: {
-    edad: {
-      type: 'number',
+    fechaNacimiento: {
+      type: 'string',
       required: true,
-      min: 10,
-      max: 120
+      columnName: 'fecha_nacimiento'
     },
     username: {
       type: 'string',

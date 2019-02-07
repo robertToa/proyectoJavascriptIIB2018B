@@ -1,0 +1,30 @@
+<div >
+  <form #formularioObjetoAvatar="ngForm"
+        novalidate
+        (submit)="emitirFormulario(formularioObjetoAvatar)">
+    <div>
+      <input id="identificador" type="text" disabled name="identificador"
+             [(ngModel)]="objetoAvatar.id" >
+    </div>
+    <div>
+      <input id="linkImg" type="text" required name="linkImg"
+             placeholder="link de la Imagen"
+             [(ngModel)]="objetoAvatar.linkImagen" #inputLink="ngModel">
+    </div>
+    <div>
+      <div  style="color: red; font-size: 12px;" *ngIf="inputLink.errors">
+        error:
+        <br>
+        <span *ngIf="inputLink.errors.required">
+         campo obligatorio
+       </span>
+      </div>
+    </div>
+    <div>
+      <button [disabled]="formularioObjetoAvatar.invalid">
+        {{nombreButton}}
+      </button>
+    </div>
+  </form>
+
+</div>

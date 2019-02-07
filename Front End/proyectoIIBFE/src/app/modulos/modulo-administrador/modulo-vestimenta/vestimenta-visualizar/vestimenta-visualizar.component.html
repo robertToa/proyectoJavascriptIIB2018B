@@ -1,0 +1,21 @@
+<div>
+  <h4>Vestimentas de la aplicacion</h4>
+</div>
+<div>
+  <table>
+    <tr>
+      <th>Identificador</th>
+      <th>Link de la imagen</th>
+      <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let vestimenta of vestimentas">
+      <td>{{vestimenta.id}}</td>
+      <td>{{vestimenta.linkImagen}}</td>
+      <td>
+        <a [routerLink]="['/Administrador','gestionVestimenta','actualizar',vestimenta.id]">
+          <button>Actualizar</button>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>

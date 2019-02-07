@@ -1,0 +1,24 @@
+<div>
+  <h3>Comunidades de la aplicacion</h3>
+</div>
+<div>
+  <table>
+    <tr>
+      <th>Identificador</th>
+      <th>Nombre de la Comunidad</th>
+      <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let comunidad of comunidades">
+      <td>{{comunidad.id}}</td>
+      <td>{{comunidad.nombreComunidad}}</td>
+      <td>
+        <a [routerLink]="['/Administrador','gestionComunidad','mimebroscomunidad',comunidad.id]">
+          <button>Ver mimebros de la comunidad</button>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>

@@ -10,11 +10,11 @@ module.exports = {
   tableName: 'db_rostro',
 
   attributes: {
-    linkImagenRostro: {
+    linkImagen: {
       type: 'string',
       required: true,
       unique: true,
-      columnName: 'link_imagen_rostro'
+      columnName: 'link_imagen'
     },
 
     consumidorAvatar: {

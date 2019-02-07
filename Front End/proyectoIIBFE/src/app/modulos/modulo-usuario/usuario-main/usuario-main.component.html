@@ -1,0 +1,29 @@
+<div style="width: 90%; align-items: baseline">
+  <div id="header" style="float: left">
+    <div id="logo">
+      <img id="div" [src]="'/assets/imagenes/logo.PNG'">
+    </div>
+  </div>
+  <div id="headerRight" style="float: right; padding-right: 10px">
+    <a routerLink="">
+      <img [src]="'/assets/imagenes/logousuario.png'">
+    </a>
+    <label >{{username}}</label>
+    <a routerLink="">
+      <img [src]="'/assets/imagenes/avatar.png'">
+    </a>
+    <a routerLink="">
+      <img [src]="'/assets/imagenes/scan.png'">
+    </a>
+    <a routerLink="">
+      <img [src]="'/assets/imagenes/perfil.png'">
+    </a>
+    <a routerLink="">
+      <img [src]="'/assets/imagenes/.png'">
+    </a>
+    <button>Log Out</button>
+  </div>
+</div>
+<div style="padding-top: 30px;">
+  <router-outlet></router-outlet>
+</div>

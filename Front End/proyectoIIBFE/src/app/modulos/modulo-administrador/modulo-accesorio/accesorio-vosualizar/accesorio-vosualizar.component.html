@@ -1,0 +1,21 @@
+<div>
+  <h4>Accesorios de la aplicacion</h4>
+</div>
+<div>
+  <table>
+    <tr>
+      <th>Identificador</th>
+      <th>Link de la imagen</th>
+      <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let accesorio of accesorios">
+      <td>{{accesorio.id}}</td>
+      <td>{{accesorio.linkImagen}}</td>
+      <td>
+        <a [routerLink]="['/Administrador','gestionAccesorio','actualizar',accesorio.id]">
+          <button>Actualizar</button>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
