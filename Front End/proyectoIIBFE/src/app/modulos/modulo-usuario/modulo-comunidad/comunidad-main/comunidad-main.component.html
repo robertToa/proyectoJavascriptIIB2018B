@@ -1,3 +1,80 @@
-<p>
-  comunidad-main works!
-</p>
+<div>
+  <div style="width: 100%; height: 300px">
+    <div style="width: 30%; float: left">
+      <div>
+        <input type="search" placeholder="search" [(ngModel)]="textBuscar">
+        <button (click)="Buscar()">Buscar</button>
+      </div>
+      <div>
+        <table>
+          <tr>
+            <th>Comunidades</th>
+          </tr>
+          <tr *ngFor="let comunidad of comunidadesUsuario">
+            <td>
+              <a [routerLink]="['/Usuario','comunidades','chat',comunidad.id]">
+                <label >{{comunidad.nombreComunidad}}</label>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div style="width: 65%; float: right">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div>
+    <br>
+  </div>
+  <div style="width: 100%">
+    <div style="float: left; width: 60%">
+      <div>
+        <div>
+          <input type="search" placeholder="search" [(ngModel)]="textoBuscarComunidad">
+          <button (click)="BuscarComunidadesNoUser()">Buscar</button>
+        </div>
+        <div>
+          <table>
+            <tr>
+              <th>Comunidades </th>
+              <th>Accion</th>
+            </tr>
+            <tr *ngFor="let comunidad of comunidadesNoUsuario">
+              <td>
+                {{comunidad.nombreComunidad}}
+              </td>
+              <td>
+                <button (click)="UnirseCounidad(comunidad.id)" >Unirse</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div style="float: right; width: 36%">
+      <div>
+        <div>
+          <h4>Crear Comunidad</h4>
+        </div>
+        <form #formularioCrear="ngForm"
+              novalidate
+              (submit)="crearComunidad(formularioCrear)">
+          <div>
+            <input id="nuevaComunidad" type="text" required name="nuevComunidad"
+                   placeholder="Nombre de la comunidad"
+                   [(ngModel)]="nombreCOmunidadNueva" #inputComunidad="ngModel">
+            <div  style="color: red; font-size: 12px;" *ngIf="inputComunidad.errors">
+              *
+            </div>
+          </div>
+          <div>
+            <button [disabled]="formularioCrear.invalid">
+              Crear Comunidad
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,62 @@
-<p>
-  scan-main works!
-</p>
+<div>
+  <h3>Generar codigos de acceso</h3>
+</div>
+<div>
+  <button (click)="generarCodigo()">Generar Codigo</button>
+</div>
+<div>
+  <div id="codigoescaneado" *ngIf="codigo">
+    <ngx-qrcode  qrc-element-type="canvas" [qrc-value]="codigo"></ngx-qrcode>
+    <button (click)="guardarCodigo()" >Aceptar y descargar</button>
+  </div>
+</div>
+<div>
+  <div style="float: left; padding-right: 10px; width: 40%">
+    <div>
+      <h4>Usuario seleccionado {{idUsuarioSeleccion}}</h4>
+    </div>
+    <div>
+      <table style="width: 80%">
+        <tr>
+          <th>USUARIOS</th>
+        </tr>
+        <tr>
+          <th>Identificador</th>
+          <th>Username</th>
+          <th>Accion</th>
+        </tr>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{usuario.id}}</td>
+          <td>{{usuario.username}}</td>
+          <td>
+            <button (click)="agregarUsuario(usuario.id)" >Seleccionar</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div style="float: right; padding-right: 10px; width: 50%">
+    <div>
+      <h4>usuario seleccionado {{idUsuarioSeleccion}}</h4>
+    </div>
+    <div>
+      <table style="width: 80%">
+        <tr>
+          <th>DEPARTAMENTOS DEL USUARIO</th>
+        </tr>
+        <tr>
+          <th>Identificador</th>
+          <th>Numero de departamento</th>
+          <th>Piso ubicacion</th>
+          <th>Accion</th>
+        </tr>
+        <tr *ngFor="let departamento of departamentos">
+          <td>{{departamento.id}}</td>
+          <td>{{departamento.numeroDepartamento}}</td>
+          <td>{{departamento.pisoDepartamento}}</td>
+          <td><button (click)="agregarDepartamento(departamento.id)">Seleccionar Depa</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

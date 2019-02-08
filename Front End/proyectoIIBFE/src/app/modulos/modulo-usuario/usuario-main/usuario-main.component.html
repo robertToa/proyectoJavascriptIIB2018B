@@ -5,24 +5,28 @@
     </div>
   </div>
   <div id="headerRight" style="float: right; padding-right: 10px">
-    <a routerLink="">
-      <img [src]="'/assets/imagenes/logousuario.png'">
+    <a routerLink="" style="padding-right: 7px">
+      <img style="width: 36px;height: 36px" [src]="'/assets/imagenes/logousuario.png'">
     </a>
-    <label >{{username}}</label>
-    <a routerLink="">
-      <img [src]="'/assets/imagenes/avatar.png'">
+    <label style="padding-right: 10px">{{usuario.username}}</label>
+    <a routerLink="" style="padding-right: 7px">
+      <img style="width: 36px;height: 36px" [src]="'/assets/imagenes/avatar.png'">
     </a>
-    <a routerLink="">
-      <img [src]="'/assets/imagenes/scan.png'">
+    <a routerLink="" style="padding-right: 7px">
+      <img style="width: 36px;height: 36px" [src]="'/assets/imagenes/scan.png'">
     </a>
-    <a routerLink="">
-      <img [src]="'/assets/imagenes/perfil.png'">
+    <a routerLink="" style="padding-right: 7px">
+      <img style="width: 36px;height: 36px" [src]="'/assets/imagenes/perfil.png'">
     </a>
-    <a routerLink="">
-      <img [src]="'/assets/imagenes/.png'">
+    <a routerLink="" style="padding-right: 7px">
+      <img style="width: 40px;height: 40px" [src]="'/assets/imagenes/departamento.png'">
     </a>
     <button>Log Out</button>
   </div>
+</div>
+<div>
+  <br>
+  <br>
 </div>
 <div style="padding-top: 30px;">
   <router-outlet></router-outlet>

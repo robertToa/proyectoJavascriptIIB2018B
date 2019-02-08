@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ConsumidorInterface} from "../../../Interface/consumidor-interface";
 
 @Component({
   selector: 'app-usuario-main',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuarioMainComponent implements OnInit {
 
+  usuario: ConsumidorInterface = <ConsumidorInterface>{};
   constructor() { }
 
   ngOnInit() {
+    this.usuario.username = "robert";
   }
 
 }

@@ -1,3 +1,38 @@
-<p>
-  usuario-login works!
-</p>
+<div>
+  <div>
+    <img [src]="'/assets/imagenes/logo.PNG'">
+  </div>
+  <div>
+    <form #formularioLogin="ngForm"
+          novalidate
+          (submit)="logearse(formularioLogin)">
+      <div>
+        <input id="usernameL" type="text" required name="username"
+               placeholder="username"
+               [(ngModel)]="username" #inputUsername="ngModel"
+        >
+      </div>
+      <div>
+        <input id="passwordL" type="password" required name="password"
+               [(ngModel)]="password"
+               placeholder="password"
+               #inputPassword="ngModel">
+        <div>
+      </div>
+        <a routerLink="/login/forgetpassword">forget Password</a>
+        <button id="buttonLoginL" [disabled]="formularioLogin.invalid">
+          Log In
+        </button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <a routerLink="/login/registrar">
+      <button>Registrarse</button>
+    </a>
+  </div>
+  <div>
+    <img style="width: 40px;height: 40px" [src]="'/assets/imagenes/reemplazar.png'">
+    <img style="width: 40px;height: 40px" [src]="'/assets/imagenes/reemplazar.png'">
+  </div>
+</div>

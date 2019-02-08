@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ComunidadInterface} from "../../../../Interface/comunidad-interface";
+import {ChatInterface} from "../../../../Interface/chat-interface";
 
 @Component({
   selector: 'app-comunidad-chat',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComunidadChatComponent implements OnInit {
 
+  comunidad: ComunidadInterface = <ComunidadInterface>{};
+  chats: ChatInterface[] = [];
   constructor() { }
 
   ngOnInit() {
+    this.comunidad.nombreComunidad = "Comunidad X";
+    this.comunidad.id = 1;
   }
 
 }

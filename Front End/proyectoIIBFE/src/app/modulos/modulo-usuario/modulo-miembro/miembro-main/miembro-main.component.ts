@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ConsumidorInterface} from "../../../../Interface/consumidor-interface";
+import {ComunidadInterface} from "../../../../Interface/comunidad-interface";
 
 @Component({
   selector: 'app-miembro-main',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiembroMainComponent implements OnInit {
 
+  textoBuscar: string = "";
+  miembros: ConsumidorInterface [] = [];
+  comunidad: ComunidadInterface =<ComunidadInterface>{};
   constructor() { }
 
   ngOnInit() {
+    this.comunidad.id = 1;
   }
 
+  BuscarMiembro(){
+  }
 }

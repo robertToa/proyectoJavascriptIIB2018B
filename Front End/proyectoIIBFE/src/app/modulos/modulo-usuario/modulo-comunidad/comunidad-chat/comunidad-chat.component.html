@@ -1,3 +1,18 @@
-<p>
-  comunidad-chat works!
-</p>
+<div>
+  <div style="float: left">
+    <h3>{{comunidad.nombreComunidad}}</h3>
+  </div>
+  <div style="float: right">
+    <a [routerLink]="['/Usuario','miembros',comunidad.id]">
+      <button>{{comunidad.nombreComunidad}}</button>
+    </a>
+  </div>
+</div>
+<div>
+  <div *ngFor="let chat of chats">
+    <div *ngIf="chat.idConsumidor">
+      {{chat.idConsumidor.username}}
+    </div>
+    <div>{{chat.mensajeChat}}</div>
+  </div>
+</div>

@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiembroAvatarComponent implements OnInit {
 
+  imagen:string ="";
   constructor() { }
 
   ngOnInit() {
+    this.imagen = "http://190.96.111.126/bn/recursos/avatar/avatar2.png";
   }
 
 }

@@ -28,6 +28,16 @@ import {DepartamentoCrearComponent} from "./modulos/modulo-administrador/modulo-
 import {DepartamentoVisualizarComponent} from "./modulos/modulo-administrador/modulo-departamento/departamento-visualizar/departamento-visualizar.component";
 import {DepartamentoActualizarComponent} from "./modulos/modulo-administrador/modulo-departamento/departamento-actualizar/departamento-actualizar.component";
 import {DepartamentoMainAdministradorComponent} from "./modulos/modulo-administrador/modulo-departamento/departamento-main-administrador/departamento-main-administrador.component";
+import {UsuarioRegistrarComponent} from "./modulos/modulo-login/usuario-registrar/usuario-registrar.component";
+import {UsuarioLoginComponent} from "./modulos/modulo-login/usuario-login/usuario-login.component";
+import {UsuarioForgetpasswordComponent} from "./modulos/modulo-login/usuario-forgetpassword/usuario-forgetpassword.component";
+import {UsuarioMainComponent} from "./modulos/modulo-usuario/usuario-main/usuario-main.component";
+import {PerfilMainComponent} from "./modulos/modulo-usuario/modulo-perfil/perfil-main/perfil-main.component";
+import {ScanMainComponent} from "./modulos/modulo-usuario/modulo-scan/scan-main/scan-main.component";
+import {ComunidadMainComponent} from "./modulos/modulo-usuario/modulo-comunidad/comunidad-main/comunidad-main.component";
+import {ComunidadChatComponent} from "./modulos/modulo-usuario/modulo-comunidad/comunidad-chat/comunidad-chat.component";
+import {MiembroMainComponent} from "./modulos/modulo-usuario/modulo-miembro/miembro-main/miembro-main.component";
+import {MiembroAvatarComponent} from "./modulos/modulo-usuario/modulo-miembro/miembro-avatar/miembro-avatar.component";
 
 const routes: Routes = [
   {
@@ -37,7 +47,26 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginMainComponent
+    component: LoginMainComponent,
+    children:[
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'registrar'
+      },
+      {
+        path: 'registrar',
+        component: UsuarioRegistrarComponent
+      },
+      {
+        path: 'login',
+        component: UsuarioLoginComponent
+      },
+      {
+        path: 'forgetpassword',
+        component: UsuarioForgetpasswordComponent
+      }
+    ]
   },
   {
     path: 'AdministradorLogin',
@@ -186,6 +215,45 @@ const routes: Routes = [
           {
             path: 'actualizar/:idDepartamento',
             component: DepartamentoActualizarComponent
+          }
+        ]
+      }
+    ]
+  },
+  {
+    path: 'Usuario',
+    component: UsuarioMainComponent,
+    children:[
+      {
+        path: '',
+        pathMatch:'full',
+        redirectTo: 'perfil'
+      },
+      {
+        path: 'perfil',
+        component: PerfilMainComponent
+      },
+      {
+        path: 'generarcodigo',
+        component: ScanMainComponent
+      },
+      {
+        path: 'comunidades',
+        component: ComunidadMainComponent,
+        children:[
+          {
+            path: 'chat/:idComunidad',
+            component: ComunidadChatComponent
+          }
+        ]
+      },
+      {
+        path: 'miembros/:idComunidad',
+        component: MiembroMainComponent,
+        children: [
+          {
+            path: 'avatar/:idConsumidor',
+            component: MiembroAvatarComponent
           }
         ]
       }

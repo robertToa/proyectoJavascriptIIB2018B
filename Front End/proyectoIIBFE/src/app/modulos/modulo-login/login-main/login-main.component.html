@@ -21,10 +21,21 @@
       </form>
     </div>
   </div>
-  <div style="padding-top: 30px;">
-    <h1>HOLA MUNDO</h1>
+</div>
+<div>
+  <br>
+  <br>
+</div>
+<div style="padding-top: 30px">
+  <div style="width: 50%; float: left">
+    <img [src]="'/assets/imagenes/portada.PNG'">
+  </div>
+  <div style="padding-top: 30px; width: 50%; float: right">
     <router-outlet></router-outlet>
-    <!--
+  </div>
+</div>
+
+<!--
     <div *ngIf="codigo">
       <ngx-qrcode [qrc-value]="codigo"></ngx-qrcode>
     </div>
@@ -35,8 +46,6 @@
       <label >{{salida}}</label>
     </div>
     -->
-  </div>
-</div>
 <!--
         <div>
          <p *ngIf="inputUsername.errors">

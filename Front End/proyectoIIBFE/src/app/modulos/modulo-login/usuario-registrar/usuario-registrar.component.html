@@ -1,3 +1,70 @@
-<p>
-  usuario-registrar works!
-</p>
+<div>
+  <h3>Registrar</h3>
+</div>
+<div >
+  <form #formularioRegistrar="ngForm"
+        novalidate
+        (submit)="registrarse(formularioRegistrar)">
+    <div>
+      <input id="nombre" type="text" required name="nombre"
+             placeholder="nombres"
+             [(ngModel)]="persona.nombre" #inputnombre="ngModel">
+      <div  style="color: red; font-size: 12px;" *ngIf="inputnombre.errors">
+        *
+      </div>
+    </div>
+    <div>
+      <input id="apellido" type="text" required name="apellido"
+             placeholder="apellido"
+             [(ngModel)]="persona.apellido" #inputapellido="ngModel">
+      <div  style="color: red; font-size: 12px;" *ngIf="inputapellido.errors">
+        *
+      </div>
+    </div>
+    <div>
+      <input id="email" type="email" required name="email"
+             placeholder="correo electronico"
+             [(ngModel)]="persona.email" #inputemail="ngModel">
+      <div  style="color: red; font-size: 12px;" *ngIf="inputemail.errors">
+        *
+      </div>
+    </div>
+    <div>
+      <input id="nickname" type="text" required name="nickname"
+             placeholder="nickname"
+             [(ngModel)]="consumidor.username" #inputnickname="ngModel">
+      <div  style="color: red; font-size: 12px;" *ngIf="inputnickname.errors">
+        *
+      </div>
+    </div>
+    <div>
+      <input id="password1" type="password" required name="password1"
+             placeholder="password"
+             [(ngModel)]="consumidor.password" #inputpasswo="ngModel">
+      <div  style="color: red; font-size: 12px;" *ngIf="inputpasswo.errors">
+        *
+      </div>
+    </div>
+    <div>
+      <input type="date" required name="fechaNac"
+             [(ngModel)]="consumidor.fechaNacimiento" #inputfecha="ngModel">
+      <div  style="color: red; font-size: 12px;" *ngIf="inputfecha.errors">
+        *
+      </div>
+    </div>
+    <div>
+      <button [disabled]="formularioRegistrar.invalid">
+        Registrarse
+      </button>
+    </div>
+    <div  style="color: red; font-size: 12px;" *ngIf="inputfecha.errors">
+      Todos los campos con "*" son obligatorio
+    </div>
+  </form>
+</div>
+<div>
+  <div>
+    <img style="width: 40px;height: 40px" [src]="'/assets/imagenes/reemplazar.png'">
+    <img style="width: 40px;height: 40px" [src]="'/assets/imagenes/reemplazar.png'">
+  </div>
+</div>
