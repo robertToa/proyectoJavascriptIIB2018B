@@ -38,6 +38,7 @@ import {ComunidadMainComponent} from "./modulos/modulo-usuario/modulo-comunidad/
 import {ComunidadChatComponent} from "./modulos/modulo-usuario/modulo-comunidad/comunidad-chat/comunidad-chat.component";
 import {MiembroMainComponent} from "./modulos/modulo-usuario/modulo-miembro/miembro-main/miembro-main.component";
 import {MiembroAvatarComponent} from "./modulos/modulo-usuario/modulo-miembro/miembro-avatar/miembro-avatar.component";
+import {DepartamentoMainComponent} from "./modulos/modulo-usuario/modulo-departamento/departamento-main/departamento-main.component";
 
 const routes: Routes = [
   {
@@ -256,6 +257,10 @@ const routes: Routes = [
             component: MiembroAvatarComponent
           }
         ]
+      },
+      {
+        path: 'departamento',
+        component: DepartamentoMainComponent
       }
     ]
   }

@@ -1,3 +1,60 @@
-<p>
-  departamento-main works!
-</p>
+<div style="height: 300px;width: 100%">
+    <div style="width: 30%; float: left; height: 100%">
+      <div>
+        <input type="search" placeholder="search" [(ngModel)]="textoBuscarDepa">
+        <button (click)="BuscarDepatamento()">Buscar</button>
+      </div>
+      <div>
+        <table>
+          <tr>
+            <th>Num Departamento Usuario</th>
+          </tr>
+          <tr *ngFor="let departamento of departamentos">
+            <td>
+              <button (click)="SeleccionDepartamento(departamento.id,departamento.numeroDepartamento)" style="width: 100%; background-color: rgba(255,255,255,0.05)">{{departamento.numeroDepartamento}}</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  <div *ngIf="idDepart != 0" style="width: 50%; float: right">
+    <div>
+      <img style="width: 300px; height: 200px" [src]="'/assets/imagenes/departamentovisualizar.jpeg'">
+    </div>
+    <div>
+      Departamento seleccionado
+      <label *ngIf="numDepart!=0">{{numDepart}}</label>
+    </div>
+    <div>
+      <button (click)="EncenderLuces()">EncenderLuces</button>
+    </div>
+
+  </div>
+</div>
+<div>
+  <div style="width: 30%; float: left; height: 100%">
+    <div>
+      <input type="search" placeholder="search" [(ngModel)]="textoBuscarNoDepa">
+      <button (click)="BuscarDepartamentoNoUsuario()">Buscar</button>
+    </div>
+    <div>
+      <table>
+        <tr>
+          <th>Numero de departamento</th>
+          <th>Accion</th>
+        </tr>
+        <tr *ngFor="let departamento of departamentosNoUsuario">
+          <td> {{departamento.numeroDepartamento}}</td>
+          <td>
+            <button (click)="SolicitarAccesoDepartamento(departamento.id)">Solicitar</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div style="width: 50%; float: right">
+    <div>
+      <img style="width: 300px; height: 200px" [src]="'/assets/imagenes/entradadepartamento.jpg'">
+    </div>
+  </div>
+</div>
