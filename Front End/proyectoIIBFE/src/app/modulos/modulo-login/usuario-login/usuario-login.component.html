@@ -1,34 +1,45 @@
 <div>
-  <div>
+  <div class="col-sm" align='center'>
+    <br>
+    <br>
     <img [src]="'/assets/imagenes/logo.PNG'">
   </div>
-  <div>
+
+  <div class="container">
+    <div class="row">
+  <div class="col-sm" align='center'>
     <form #formularioLogin="ngForm"
           novalidate
           (submit)="logearse(formularioLogin)">
       <div>
+        <br>
         <input id="usernameL" type="text" required name="username"
-               placeholder="username"
+               placeholder="username" class="form-control"
                [(ngModel)]="username" #inputUsername="ngModel"
         >
       </div>
       <div>
+        <br>
         <input id="passwordL" type="password" required name="password"
-               [(ngModel)]="password"
+               [(ngModel)]="password" class="form-control"
                placeholder="password"
                #inputPassword="ngModel">
+        <a routerLink="/login/forgetpassword">forget Password</a>
         <div>
       </div>
-        <a routerLink="/login/forgetpassword">forget Password</a>
-        <button id="buttonLoginL" [disabled]="formularioLogin.invalid">
+        <br>
+        <button id="buttonLoginL"  [disabled]="formularioLogin.invalid" class="btn btn-primary btn-lg btn-block">
           Log In
         </button>
       </div>
     </form>
   </div>
-  <div>
+    </div>
+  </div>
+  <div class="col-sm" align='center'>
+    <br>
     <a routerLink="/login/registrar">
-      <button>Registrarse</button>
+      <button class="btn btn-secondary btn-lg btn-block" >Registrarse</button>
     </a>
   </div>
   <div>

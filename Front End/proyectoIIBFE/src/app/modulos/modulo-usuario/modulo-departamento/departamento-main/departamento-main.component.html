@@ -1,8 +1,10 @@
 <div style="height: 300px;width: 100%">
-    <div style="width: 30%; float: left; height: 100%">
-      <div>
-        <input type="search" placeholder="search" [(ngModel)]="textoBuscarDepa">
-        <button (click)="BuscarDepatamento()">Buscar</button>
+    <div style="width: 30%; float: left; height: 100%" class="col-sm">
+      <div class="input-group mb-3">
+        <input type="search" placeholder="search" class="form-control" [(ngModel)]="textoBuscarDepa">
+        <div class="input-group-append">
+        <button (click)="BuscarDepatamento()" class="btn btn-outline-secondary">Buscar</button>
+        </div>
       </div>
       <div>
         <table>
@@ -19,23 +21,25 @@
     </div>
   <div *ngIf="idDepart != 0" style="width: 50%; float: right">
     <div>
-      <img style="width: 300px; height: 200px" [src]="'/assets/imagenes/departamentovisualizar.jpeg'">
+      <img style="width: 300px; height: 200px" [src]="'/assets/imagenes/departamentovisualizar.jpeg'" class="img-thumbnail">
     </div>
     <div>
       Departamento seleccionado
       <label *ngIf="numDepart!=0">{{numDepart}}</label>
     </div>
     <div>
-      <button (click)="EncenderLuces()">EncenderLuces</button>
+      <button (click)="EncenderLuces()" class="btn btn-success">EncenderLuces</button>
     </div>
 
   </div>
 </div>
 <div>
-  <div style="width: 30%; float: left; height: 100%">
-    <div>
-      <input type="search" placeholder="search" [(ngModel)]="textoBuscarNoDepa">
-      <button (click)="BuscarDepartamentoNoUsuario()">Buscar</button>
+  <div style="width: 30%; float: left; height: 100%" class="col-sm">
+    <div class="input-group mb-3">
+      <input type="search" placeholder="search" class="form-control" [(ngModel)]="textoBuscarNoDepa">
+      <div class="input-group-append">
+      <button (click)="BuscarDepartamentoNoUsuario()" class="btn btn-outline-secondary">Buscar</button>
+      </div>
     </div>
     <div>
       <table>
@@ -46,7 +50,7 @@
         <tr *ngFor="let departamento of departamentosNoUsuario">
           <td> {{departamento.numeroDepartamento}}</td>
           <td>
-            <button (click)="SolicitarAccesoDepartamento(departamento.id)">Solicitar</button>
+            <button (click)="SolicitarAccesoDepartamento(departamento.id)" class="btn btn-primary">Solicitar</button>
           </td>
         </tr>
       </table>
@@ -54,7 +58,7 @@
   </div>
   <div style="width: 50%; float: right">
     <div>
-      <img style="width: 300px; height: 200px" [src]="'/assets/imagenes/entradadepartamento.jpg'">
+      <img style="width: 300px; height: 200px" [src]="'/assets/imagenes/entradadepartamento.jpg'" class="img-thumbnail">
     </div>
   </div>
 </div>

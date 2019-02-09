@@ -1,10 +1,10 @@
 <div>
-  <div style="float: left">
+  <div style="float: left; padding-left: 40px">
     <h3>{{comunidad.nombreComunidad}}</h3>
   </div>
-  <div style="float: right">
+  <div style="float: right; padding-right: 40px">
     <a [routerLink]="['/Usuario','miembros',comunidad.id]">
-      <button>{{comunidad.nombreComunidad}}</button>
+      <button class="btn btn-success">{{comunidad.nombreComunidad}}</button>
     </a>
   </div>
 </div>

@@ -1,11 +1,13 @@
-<div>
+<div class="col-sm-6">
   <div style="float: left; width: 50%;">
     <div>
       <h3></h3>
     </div>
-    <div>
-      <input type="search" placeholder="search" [(ngModel)]="textoBuscar">
-      <button (click)="BuscarMiembro()">Buscar</button>
+    <div class="input-group mb-3">
+      <input type="search" placeholder="search" class="form-control" [(ngModel)]="textoBuscar">
+      <div class="input-group-append">
+      <button (click)="BuscarMiembro()" class="btn btn-primary">Buscar</button>
+      </div>
     </div>
     <div>
       <table>

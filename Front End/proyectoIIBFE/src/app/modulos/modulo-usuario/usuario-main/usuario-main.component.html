@@ -1,14 +1,17 @@
+<nav class="navbar navbar-dark bg-dark">
 <div style="width: 90%; align-items: baseline">
+
+  <br>
   <div id="header" style="float: left">
     <div id="logo">
       <img id="div" [src]="'/assets/imagenes/logo.PNG'">
     </div>
-  </div>
+   </div>
   <div id="headerRight" style="float: right; padding-right: 10px">
     <a routerLink="perfil" style="padding-right: 7px">
       <img style="width: 36px;height: 36px" [src]="'/assets/imagenes/logousuario.png'">
     </a>
-    <label style="padding-right: 10px">{{usuario.username}}</label>
+    <label style="padding-rig">{{usuario.username}}</label>
     <a routerLink="perfil" style="padding-right: 7px">
       <img style="width: 36px;height: 36px" [src]="'/assets/imagenes/avatar.png'">
     </a>
@@ -21,9 +24,14 @@
     <a routerLink="departamento" style="padding-right: 7px">
       <img style="width: 40px;height: 40px" [src]="'/assets/imagenes/departamento.png'">
     </a>
-    <button>Log Out</button>
+
+    <button class="btn btn-danger">Log Out</button>
+
   </div>
+
 </div>
+</nav>
+
 <div>
   <br>
   <br>
