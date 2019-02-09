@@ -20,7 +20,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
-
+  'POST /Consumidor/login': 'ConsumidorController.login',
+  'POST /Consumidor/buscarUsername': 'ConsumidorController.buscarUsername',
 
   /***************************************************************************
   *                                                                          *

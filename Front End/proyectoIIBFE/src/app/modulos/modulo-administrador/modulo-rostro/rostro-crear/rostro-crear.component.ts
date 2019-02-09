@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ObjetosAvatarInterface} from "../../../../Interface/objetos-avatar-interface";
+import {ActivatedRoute, Router} from "@angular/router";
+import {ObjetoAvatarServiceService} from "../../../../Servicios/servicio-objeto-avatar/objeto-avatar-service.service";
 
 @Component({
   selector: 'app-rostro-crear',
@@ -8,12 +10,21 @@ import {ObjetosAvatarInterface} from "../../../../Interface/objetos-avatar-inter
 })
 export class RostroCrearComponent implements OnInit {
 
-  constructor() { }
+  modelo:string = "/Rostro";
+  constructor(
+    private readonly _activatedRoute: ActivatedRoute,
+    private readonly _objetoAvatarRest: ObjetoAvatarServiceService,
+    private readonly _route: Router,
+  ) { }
 
   ngOnInit() {
   }
 
   crearRostro(objeto: ObjetosAvatarInterface){
-    console.log(objeto);
+    const crear$ = this._objetoAvatarRest.create(objeto,this.modelo);
+    crear$.subscribe(
+      (objeto) => this._route.navigate((['/Administrador/gestionRostro'])),
+      (error) => alert("No se a podido crear")
+    )
   }
 }

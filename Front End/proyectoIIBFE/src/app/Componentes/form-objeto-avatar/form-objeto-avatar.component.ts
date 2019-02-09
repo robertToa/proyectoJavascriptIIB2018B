@@ -24,8 +24,11 @@ export class FormObjetoAvatarComponent implements OnInit {
 
   ngOnInit() {
     this.nombreButton = this.nombreButtonAux;
-    if(this.objetoAvatarAux != null)
+    if(this.objetoAvatarAux != null){
       this.objetoAvatar = JSON.parse(JSON.stringify(this.objetoAvatarAux));
+      //console.log(this.objetoAvatar);
+    }
+
   }
 
   emitirFormulario(){

@@ -1,7 +1,7 @@
 <div>
   <h5>Actualizar departamento</h5>
 </div>
-<div>
+<div *ngIf="departamentoActualizar">
   <app-form-departamento
     [departamentoAux]= "departamentoActualizar"
     [nombreButtonAux]= "'Actualizar'"

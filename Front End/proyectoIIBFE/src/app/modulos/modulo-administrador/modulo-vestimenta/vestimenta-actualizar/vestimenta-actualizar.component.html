@@ -1,7 +1,7 @@
 <div>
   <h5>Actualizar Vestimenta</h5>
 </div>
-<div>
+<div *ngIf="vestimentaActualizar">
   <app-form-objeto-avatar
     [objetoAvatarAux]= "vestimentaActualizar"
     [nombreButtonAux]= "'Actualizar'"

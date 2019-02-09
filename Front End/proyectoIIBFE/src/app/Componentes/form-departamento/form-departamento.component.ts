@@ -30,6 +30,18 @@ export class FormDepartamentoComponent implements OnInit {
   }
 
   emitirFormulario(){
-    this.formularioValido.emit(this.departamento);
+    var errores: string ="";
+    if(this.departamento.numeroDepartamento<0 || this.departamento.numeroDepartamento>60){
+      errores += "/n Departamento entre[0-60]"
+    }
+    if(this.departamento.pisoDepartamento<0 || this.departamento.pisoDepartamento>5){
+      errores += "/n Solo existe 5 pisos"
+    }
+    if(errores ===""){
+      this.formularioValido.emit(this.departamento);
+    }else{
+      alert(errores);
+    }
+
   }
 }

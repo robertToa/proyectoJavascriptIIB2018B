@@ -44,10 +44,10 @@
           <th>Accion</th>
         </tr>
         <tr *ngFor="let departamento of departamentosNoUsuario">
-          <td> {{departamento.numeroDepartamento}}</td>
-          <td>
-            <button (click)="SolicitarAccesoDepartamento(departamento.id)">Solicitar</button>
-          </td>
+            <td *ngIf="funcion(departamento.id)"> {{departamento.numeroDepartamento}}</td>
+            <td *ngIf="funcion(departamento.id)">
+              <button (click)="SolicitarAccesoDepartamento(departamento.id)">Solicitar</button>
+            </td>
         </tr>
       </table>
     </div>

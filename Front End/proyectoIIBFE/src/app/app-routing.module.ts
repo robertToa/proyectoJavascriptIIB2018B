@@ -39,6 +39,8 @@ import {ComunidadChatComponent} from "./modulos/modulo-usuario/modulo-comunidad/
 import {MiembroMainComponent} from "./modulos/modulo-usuario/modulo-miembro/miembro-main/miembro-main.component";
 import {MiembroAvatarComponent} from "./modulos/modulo-usuario/modulo-miembro/miembro-avatar/miembro-avatar.component";
 import {DepartamentoMainComponent} from "./modulos/modulo-usuario/modulo-departamento/departamento-main/departamento-main.component";
+import {IsUsuarioServiceService} from "./Guards/is-usuario-service.service";
+import {IsAdministradorServiceService} from "./Guards/is-administrador-service.service";
 
 const routes: Routes = [
   {
@@ -76,6 +78,9 @@ const routes: Routes = [
   {
     path: 'Administrador',
     component: AdministradorMainComponent,
+    canActivate: [
+      IsAdministradorServiceService
+    ],
     children: [
       {
         path:'',
@@ -224,6 +229,9 @@ const routes: Routes = [
   {
     path: 'Usuario',
     component: UsuarioMainComponent,
+    canActivate: [
+      IsUsuarioServiceService
+    ],
     children:[
       {
         path: '',

@@ -46,6 +46,17 @@ import { FormObjetoAvatarComponent } from './Componentes/form-objeto-avatar/form
 import { ConsumidorMainComponent } from './modulos/modulo-administrador/modulo-consumidor/consumidor-main/consumidor-main.component';
 import { DepartamentoMainAdministradorComponent } from './modulos/modulo-administrador/modulo-departamento/departamento-main-administrador/departamento-main-administrador.component';
 import { FormDepartamentoComponent } from './Componentes/form-departamento/form-departamento.component';
+import {ObjetoAvatarServiceService} from "./Servicios/servicio-objeto-avatar/objeto-avatar-service.service";
+import {HttpClientModule} from "@angular/common/http";
+import {ConsumidorRestServiceService} from "./Servicios/consumidor-rest-service/consumidor-rest-service.service";
+import {PersonaRestServiceService} from "./Servicios/persona-rest-service/persona-rest-service.service";
+import {DepartamentoRestServiceService} from "./Servicios/departamento-rest-service/departamento-rest-service.service";
+import {ConsuDepartRestServiceService} from "./Servicios/consu-depart-rest-service/consu-depart-rest-service.service";
+import {ComunidadRestServiceService} from "./Servicios/comunidad-rest-service/comunidad-rest-service.service";
+import {AutenticacionRestServiceService} from "./Servicios/autenticacion-rest/autenticacion-rest-service.service";
+import {AccesoConsumidorRestServiceService} from "./Servicios/acceso-consumidor-rest-service/acceso-consumidor-rest-service.service";
+import {IsAdministradorServiceService} from "./Guards/is-administrador-service.service";
+import {IsUsuarioServiceService} from "./Guards/is-usuario-service.service";
 @NgModule({
   declarations: [
     AppComponent,
@@ -94,10 +105,22 @@ import { FormDepartamentoComponent } from './Componentes/form-departamento/form-
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     NgxQRCodeModule
   ],
-  providers: [],
+  providers: [
+    ObjetoAvatarServiceService,
+    ConsumidorRestServiceService,
+    PersonaRestServiceService,
+    DepartamentoRestServiceService,
+    ConsuDepartRestServiceService,
+    ComunidadRestServiceService,
+    AutenticacionRestServiceService,
+    AccesoConsumidorRestServiceService,
+    IsAdministradorServiceService,
+    IsUsuarioServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -24,12 +24,15 @@
       </td>
       <td>{{condepar.habilitarDepartamento}}</td>
       <td>
+        <!--
         <div *ngIf="condepar.habilitarDepartamento===true">
           <button>Deshabilitar</button>
         </div>
+        -->
         <div *ngIf="condepar.habilitarDepartamento === false">
           <button>Habilitar</button>
         </div>
+        <button (click)="eliminar(condepar.id)" >Eliminar</button>
       </td>
     </tr>
   </table>
